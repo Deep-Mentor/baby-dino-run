@@ -11,5 +11,5 @@ https://youtu.be/9TPtAMpI478
 Just run the file baby_dino_run.py
 
 # How to play the game
-Press Space to Jump
-Press Q or close the window to quit the game 
+Press Space to Jump.  
+Press Q or close the window to quit the game.
