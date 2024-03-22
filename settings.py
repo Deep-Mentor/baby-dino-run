@@ -5,7 +5,7 @@ class Settings:
         self.screen_dimension = (1400,550)
         self.background_file_location = "images/background/background.png"
 
-        self.dino_position = (0,0)
+        self.dino_position = (50,390)
         self.dino_file_location = "images/dino"
 
         self.enemy_position = (1400,340)
