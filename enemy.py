@@ -1,12 +1,13 @@
 import pygame
 import os
+import image_utils
 
 class Enemy:
     """Adding an enemy to the game. The images should be of same size and png type"""
 
     def __init__(self,screen,enemy_file_location,start_x,start_y):
         self.screen = screen
-        self.enemy_images = self.load_images(enemy_file_location)
+        self.enemy_images = image_utils.load_images(enemy_file_location)
         self.enemy_image_x = start_x
         self.enemy_image_y = start_y
 
@@ -32,15 +33,6 @@ class Enemy:
         self.present_image_index += 1
         if self.present_image_index >= len(self.enemy_images):
             self.present_image_index = 0
-
-    def load_images(self,source_folder_path):
-        """Load images from a folder"""
-        images = []
-        for file_name in sorted(os.listdir(source_folder_path)):
-            complete_file_path = os.path.join(source_folder_path,file_name)
-            if ".png" in complete_file_path:
-                images.append(pygame.image.load(complete_file_path))
-        return images
 
     def draw_enemy(self):
         """draw the Enemy image"""

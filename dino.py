@@ -1,6 +1,8 @@
 import pygame
 import os
 from enum import Enum
+
+import image_utils
 from sound import SoundManager
 
 class Operation(Enum):
@@ -132,14 +134,5 @@ class Dino:
 
     def load_behaviour_images(self,dino_base_directory):
         """Load behaviour images"""
-        self.run_images = self.load_images(os.path.join(dino_base_directory,self.RUN_SUB_FOLDER_NAME))
-        self.jump_images = self.load_images(os.path.join(dino_base_directory,self.JUMP_SUB_FOLDER_NAME))
-
-    def load_images(self,source_folder_path):
-        """Load images from a folder"""
-        images = []
-        for file_name in sorted(os.listdir(source_folder_path)):
-            complete_file_path = os.path.join(source_folder_path,file_name)
-            if ".png" in complete_file_path:
-                images.append(pygame.image.load(complete_file_path))
-        return images
+        self.run_images = image_utils.load_images(os.path.join(dino_base_directory,self.RUN_SUB_FOLDER_NAME))
+        self.jump_images = image_utils.load_images(os.path.join(dino_base_directory,self.JUMP_SUB_FOLDER_NAME))
