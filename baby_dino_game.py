@@ -108,7 +108,7 @@ class Baby_Dino_Game:
         my_font = pygame.font.SysFont('Comic Sans MS',30)
         text_surface = my_font.render("Game Over", False,(0,0,0))
         self.screen.blit(text_surface,(self.settings.game_over_message_position[0],self.settings.game_over_message_position[1]))
-        text_surface = my_font.render("Press P if you want to play again", False,(255,255,255))
+        text_surface = my_font.render("Press P if you want to play again", False,(0,0,0))
         self.screen.blit(text_surface,(self.settings.game_over_message_position[0] - 150,self.settings.game_over_message_position[1] + 30))
         text_surface = my_font.render("Press Q if you want to quit game", False,(0,0,0))
         self.screen.blit(text_surface,(self.settings.game_over_message_position[0] - 150,self.settings.game_over_message_position[1] + 60))
