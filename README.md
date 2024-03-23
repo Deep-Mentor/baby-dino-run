@@ -8,7 +8,7 @@ https://youtu.be/9TPtAMpI478
 3.12
 
 # How to run the game
-Just run the file baby_dino_run.py
+Just run the file baby_dino_run.py using command 'python3 baby_dino_game.py'
 
 # How to play the game
 Press Space to Jump.  
