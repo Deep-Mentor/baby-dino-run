@@ -3,7 +3,7 @@ class Settings:
 
     def __init__(self):
         self.screen_dimension = (1400,550)
-        self.background_file_location = "images/background/background.png"
+        self.background_file_location = "images/background"
 
         self.dino_position = (50,390)
         self.dino_file_location = "images/dino"

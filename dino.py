@@ -26,9 +26,9 @@ class Dino:
 
         self.present_image_index = 0
         self.movement_tracker = 1
-        self.run_image_change_rate = 10
+        self.run_image_change_rate = 5
 
-        self.dino_jump_speed = 5
+        self.dino_jump_speed = 10
         self.dino_max_jump = 200
         self.max_height_stay = 15
         self.max_height_stay_present_count = 0
@@ -76,7 +76,7 @@ class Dino:
                 else:
                     self.dino_pos_y -= self.dino_jump_speed
                 self.update_dino_flight_flags()
-                if self.movement_tracker % self.run_image_change_rate == 0 and self.check_if_jump_images_need_to_be_changed():
+                if self.check_if_jump_images_need_to_be_changed():
                     self.update_present_image()
             else:
                 self.run()
@@ -118,8 +118,8 @@ class Dino:
         if not self.dino_reached_max_height or not self.max_height_stay_present_count < self.max_height_stay:
             distance_travelled = self.ground_pos_y - self.dino_pos_y
             if self.dino_reached_max_height:
-                distance_travelled += self.ground_pos_y -self.dino_max_jump
-            return distance_travelled/(self.present_image_index + 1)*self.image_change_unit_distance > 0
+                distance_travelled = 2*(self.ground_pos_y -self.dino_max_jump) - distance_travelled
+            return distance_travelled/((self.present_image_index + 1)*self.image_change_unit_distance)> 0
         return False
 
     def initialize_jump_image_change_distance(self):

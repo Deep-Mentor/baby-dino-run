@@ -30,7 +30,7 @@ class Baby_Dino_Game:
         self.enemies = []
         self.enemies.append(self.create_enemy())
 
-        self.speed =5
+        self.speed =10
         self.loop_count = 0
         self.score = Score(self.screen,self.settings.score_position[0],self.settings.score_position[1])
 
