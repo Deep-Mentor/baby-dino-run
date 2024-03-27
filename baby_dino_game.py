@@ -21,7 +21,7 @@ class Baby_Dino_Game:
 
     def initialize_game(self):
         self.background = Background(self.screen,self.settings.background_file_location)
-        self.music = SoundManager("sound")
+        self.music = SoundManager(self.settings.sound_file_location)
         self.dino = Dino(self.screen,
                          self.settings.dino_file_location,
                          self.settings.dino_position[0],

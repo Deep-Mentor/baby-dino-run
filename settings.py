@@ -13,3 +13,5 @@ class Settings:
 
         self.score_position = (1300,50)
         self.game_over_message_position = (600,100)
+
+        self.sound_file_location ="sound"
