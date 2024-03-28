@@ -28,6 +28,7 @@ class Score:
         self.score = int(pixels_travelled/10)
 
     def update_highest_score(self):
+        """Update highest score value if applicable"""
         if self.score > self.highest_score:
             self.highest_score = self.score
     
