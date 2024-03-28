@@ -15,3 +15,5 @@ class Settings:
         self.game_over_message_position = (600,100)
 
         self.sound_file_location ="sound"
+
+        self.score_file_path = "data/score.txt"

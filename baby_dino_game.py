@@ -91,6 +91,7 @@ class Baby_Dino_Game:
             enemy_centre = [enemy.enemy_image_x + 75,enemy.enemy_image_y + 75]
             if self.check_collision(dino_centre,enemy_centre):
                 self.dino.dead()
+                self.score.save_highest_score()
                 self.speed = 0
                 self.display_game_over_message()
     

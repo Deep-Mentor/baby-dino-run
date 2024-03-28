@@ -36,9 +36,9 @@ class Background:
         first_image_position = self.background_layer_positions[index][0]
         second_image_position = self.background_layer_positions[index][1]
         if first_image_position <= -1*self.background_image_width:
-            first_image_position = self.background_image_width
+            first_image_position = second_image_position + self.background_image_width
         if second_image_position <= -1*self.background_image_width:
-            second_image_position = self.background_image_width
+            second_image_position = first_image_position + self.background_image_width
         self.background_layer_positions[index] = (first_image_position,second_image_position)
 
     def draw_background_layers(self):
