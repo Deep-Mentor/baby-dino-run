@@ -1,8 +1,6 @@
 import pygame
 import os
-import pdb
 
-from pathlib import Path
 from settings import Settings
 
 class Score:
