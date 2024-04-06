@@ -61,6 +61,7 @@ class Baby_Dino_Game:
                 self.dino.move_dino()
                 self.check_dino_enemy_collision()
                 pygame.display.flip()
+                self.update_speed_if_applicable()
             self.clock.tick(60)
 
     def update_enemies(self):
@@ -113,6 +114,11 @@ class Baby_Dino_Game:
         self.screen.blit(text_surface,(self.settings.game_over_message_position[0] - 150,self.settings.game_over_message_position[1] + 30))
         text_surface = my_font.render("Press Q if you want to quit game", False,(0,0,0))
         self.screen.blit(text_surface,(self.settings.game_over_message_position[0] - 150,self.settings.game_over_message_position[1] + 60))
+
+    def update_speed_if_applicable(self):
+        if self.speed*self.loop_count%10000 < self.speed*(self.loop_count-1)%10000:
+            self.speed += 1
+
 
 if __name__ == "__main__":
     baby_dino_run = Baby_Dino_Game()
